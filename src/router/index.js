@@ -41,6 +41,11 @@ const router = new VueRouter({
       component: () => import("@/views/About"), // 页面的路径
     },
     {
+      path: "/cart", // 访问的地址
+      name: "Cart",
+      component: () => import("@/views/cart/Cart"), // 页面的路径
+    },
+    {
       path: '/403',// 访问的地址
       name: '403',
       component: () => import('@/views/exception/403')// 页面的路径
