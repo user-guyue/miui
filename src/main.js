@@ -9,16 +9,19 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import Antdv from 'ant-design-vue'
-import 'ant-design-vue/dist/antd.css'
-// 国际化文案
-import  ConfigProvider  from 'ant-design-vue';
 // 引用和导入路由axios
 import axios from "axios";
-Vue.use(Antdv);
-Vue.use(ConfigProvider);
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
+// import Antdv from 'ant-design-vue'
+// import 'ant-design-vue/dist/antd.css'
+// 国际化文案
+// import  ConfigProvider  from 'ant-design-vue'
 // 把axios导入到vue
-Vue.use(axios);
+Vue.prototype.$http = axios
+// Vue.use(Antdv);
+// Vue.use(ConfigProvider);
 Vue.config.productionTip = false
 new Vue({
   router,
