@@ -8,7 +8,7 @@
 -->
 <template>
   <div id="app">
-    <div>我是关于页面</div>
+    <h1>我是关于页面</h1>
     <button @click="message++">{{ message }}</button>
   </div>
 </template>

@@ -19,7 +19,16 @@ export default {
     return {
     }
   },
-  methods: {}
+  created() {
+    this.getPage()
+  },
+  methods: {
+    getPage(){
+      // this.$http.get("https://biger.applinzi.com/page.php").then(res=>{
+      //  console.log(res.data)
+      // })
+    }
+  }
 }
 </script>
 <style lang="less" scoped>
