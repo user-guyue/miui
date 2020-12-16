@@ -7,24 +7,29 @@
  * @FilePath: \vue_ui\src\App.vue
 -->
 <template>
-  <a-config-provider :locale="locale">
-    <div id="app">
-      <router-view/>
-      <router-link to="/">首页</router-link>｜
-      <router-link to="/user">个人中心</router-link> |
-      <router-link to="/about">关于</router-link>
-    </div>
-  </a-config-provider>
+  <div id="app">
+    <router-view />
+    <van-tabbar route>
+      <van-tabbar-item replace to="/" icon="home-o"> 首页 </van-tabbar-item>
+      <van-tabbar-item replace to="/user" icon="search">
+        个人中心
+      </van-tabbar-item>
+      <van-tabbar-item replace to="/about" icon="friends-o">
+        关于
+      </van-tabbar-item>
+      <van-tabbar-item replace to="/cart" icon="setting-o">
+        购物车
+      </van-tabbar-item>
+    </van-tabbar>
+  </div>
 </template>
 <script>
-  import zhCN from 'ant-design-vue/lib/locale-provider/zh_CN';
-  export default {
-    data() {
-      return {
-        locale: zhCN,
-      };
-    },
-  };
+export default {
+  data() {
+    return {};
+  },
+  methods: {},
+};
 </script>
 <style lang="less">
 #app {
@@ -47,19 +52,19 @@
     }
   }
 }
-.marginRight10{
+.marginRight10 {
   margin-right: 10px;
 }
 .error-color {
-  color:#ff4d4f;
+  color: #ff4d4f;
 }
-.success-color{
+.success-color {
   color: #52c41a;
 }
 .error-background {
   background: #ff4d4f;
 }
-.success-background{
-  background: #52c41a!important;
+.success-background {
+  background: #52c41a !important;
 }
 </style>
